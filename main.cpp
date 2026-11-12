@@ -2,7 +2,7 @@
 #include <clocale>
 
 int main() {
-    setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, ".UTF-8");
 
     Smartphone phone("Samsung", 256);
     Laptop laptop("ASUS", 16);
