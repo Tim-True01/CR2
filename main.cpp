@@ -3,28 +3,23 @@
 
 int main() {
     setlocale(LC_ALL, ".UTF-8");
-
     Smartphone phone("Samsung", 256);
     Laptop laptop("ASUS", 16);
     Tablet tablet("iPad", 11);
 
     cout << "=== Раннее связывание ===" << endl;
-
     phone.showInfo();
     phone.turnOn();
 
     cout << endl;
-
     laptop.showInfo();
     laptop.turnOn();
 
     cout << endl;
-
     tablet.showInfo();
     tablet.turnOn();
 
     cout << endl << "=== Позднее связывание ===" << endl;
-
     Device* device = nullptr;
     int choice;
 
@@ -34,7 +29,6 @@ int main() {
     cout << "3 - Планшет" << endl;
 
     cin >> choice;
-
     if (choice == 1) {
         device = new Smartphone("Xiaomi", 128);
     }
@@ -53,7 +47,6 @@ int main() {
         device->turnOn();
         delete device;
     }
-
     cout << endl;
     cout << "Количество созданных объектов: "
          << Device::count << endl;
