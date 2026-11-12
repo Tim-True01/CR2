@@ -6,7 +6,6 @@ using namespace std;
 class Device {
 protected:
     string name;
-
 public:
     static int count;
 
@@ -15,17 +14,14 @@ public:
     virtual void turnOn() = 0;
     virtual ~Device();
 };
-
 class Smartphone : public Device {
 private:
     int memory;
-
 public:
     Smartphone(string n, int m);
     void showInfo() override;
     void turnOn() override;
 };
-
 class Laptop : public Device {
 private:
     int ram;
